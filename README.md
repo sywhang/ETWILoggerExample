@@ -10,10 +10,16 @@ This is just a simple sample code for enabling ILogger events using ETW.
 
 3. Launch this app from an admin console and specify a duration you want to collect for.
 
-For example, this collects ILogger logs for 10 seconds:
+For example, this collects ILogger logs for 10 seconds to a ETL file and parses it after the session is over:
 
 ```
-dotnet run 10
+dotnet run file 10
+```
+
+To parse the events in real-time instead, you can do:
+
+```
+dotnet run rt 10
 ```
 
 > NOTE: You *must* run as administrator, since you need admin privilege to start an ETW session.
